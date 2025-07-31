@@ -18,3 +18,6 @@ Using this information, your objectives are to:
     2. If the space remained circular, what would be the radius of this expanded garden?
 
 `Part 3: Errors in Judgement`
+The scientists decided not to listen to your recommendations, and have instead started with 100 plants in the original 5-meter-radius garden.
+
+Use try and catch to wrap your work in an error-handling block. If the amount of space required to hold the originally provided number of plants exceeds the amount of space available, throw a new error and log an appropriate message.

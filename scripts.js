@@ -15,7 +15,7 @@ const rateOfGrowth = 2;
 
 {
     weeklyPlantNumber = initialPlantNumber * rateOfGrowth * numberOfWeeks;
-    console.log (weeklyPlantNumber) 
+    console.log (`The total number of plants after ${numberOfWeeks} weeks will be ${weeklyPlantNumber}`) 
 }
 
 // Task 2: 
@@ -50,15 +50,30 @@ let additionalSpaceRequired;
 let targetNumberofWeeks = 10;
 let finalNumberofPlants
 
-finalNumberofPlants = newInitialPlantNumber * rateOfGrowth * targetNumberofWeeks;
-finalSpaceRequired = finalNumberofPlants * spaceRequired;
+{
+    finalNumberofPlants = newInitialPlantNumber * rateOfGrowth * targetNumberofWeeks;
+        console.log (`The final number of plants after 10 weeks will be ${finalNumberofPlants}`)
+    
+    finalSpaceRequired = finalNumberofPlants * spaceRequired;
+        console.log (`The space required to grow the final number of plants will be ${finalSpaceRequired}`)
 
-additionalSpaceRequired = finalNumberofPlants - gardenCapacity;
-console.log (`The amount of additional space that would be required is ${additionalSpaceRequired} square meters`)
-newRadius = Math.sqrt(additionalSpaceRequired/PI)
-console.log(`The radius of the expanded region will be ${newRadius} meters`);
+    additionalSpaceRequired = finalNumberofPlants - gardenCapacity;
+        console.log (`The amount of additional space that would be required is ${additionalSpaceRequired} square meters`)
+
+    newRadius = Math.sqrt(additionalSpaceRequired/PI)
+        console.log(`The radius of the expanded region will be ${newRadius} meters`);
+
+}
 
 
-// Part 3: 
+// Part 3: Errors in Judgement
+// The scientists decided not to listen to your recommendations, and have instead started with 100 plants in the original 5-meter-radius garden. //
 
-// git add . git commit -m "" git push origin main
+// Use try and catch to wrap your work in an error-handling block. If the amount of space required to hold the originally provided number of plants exceeds the amount of space available, throw a new error and log an appropriate message. //
+
+try {
+    let err = finalSpaceRequired > gardenCapacity;
+             console.log("You don't have enough Space")
+} catch (err) {
+        console.error (err)
+    };
