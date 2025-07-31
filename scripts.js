@@ -30,6 +30,7 @@ const rateOfGrowth = 2;
     const spaceRequired = 0.8 * 0.8;
     let areaConsumed = weeklyPlantNumber * spaceRequired;
 
+
     if (areaConsumed > 0.8 * gardenCapacity) {
         console.log(`The total area consumed is ${areaConsumed}: decision is to PRUNE`)
     } else if (areaConsumed >= 0.8 * gardenCapacity || areaConsumed <= 0.8 * gardenCapacity) {
@@ -39,7 +40,23 @@ const rateOfGrowth = 2;
     }
 
 
-// Part 2: 
+// Part 2: Think Bigger
+// The conservation area in which the garden is located has multiple other gardens. Using the logic you have already created, determine:
+// 1. The amount of additional space that would be required if the scientists were to start with 100 plants, and did not prune them for 10 weeks.
+// 2. If the space remained circular, what would be the radius of this expanded garden?
+
+let newInitialPlantNumber = 100;
+let additionalSpaceRequired;
+let targetNumberofWeeks = 10;
+let finalNumberofPlants
+
+finalNumberofPlants = newInitialPlantNumber * rateOfGrowth * targetNumberofWeeks;
+finalSpaceRequired = finalNumberofPlants * spaceRequired;
+
+additionalSpaceRequired = finalNumberofPlants - gardenCapacity;
+console.log (`The amount of additional space that would be required is ${additionalSpaceRequired} square meters`)
+newRadius = Math.sqrt(additionalSpaceRequired/PI)
+console.log(`The radius of the expanded region will be ${newRadius} meters`);
 
 
 // Part 3: 
